@@ -1,0 +1,5 @@
+name        : "gtuner"
+description : "Simple guitar tuner using the Web Audio API."
+baseurl     : "/gtuner"
+
+navCategories : ["Project", "Application"]

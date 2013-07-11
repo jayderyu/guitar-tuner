@@ -1,0 +1,15 @@
+<ul class="nav nav-list">
+  {% for category in site.navCategories %}
+    <li class="nav-header">{{ category }}</li>
+    {% for thatpage in site.pages %}
+      {% if thatpage.category == category %}
+        <li {% if thatpage.url == page.url %} class="active" {% endif %}>
+        <a href=" {{site.baseurl}}{{ thatpage.url }}">{{ thatpage.title }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+      {% if category == 'Project' %}
+        <li><a href="https://github.com/archblob/gtuner">GitHub</a></li>
+      {% endif %}
+  {% endfor %}
+</ul>
