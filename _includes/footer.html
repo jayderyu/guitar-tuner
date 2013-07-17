@@ -1,4 +1,9 @@
 
+        {% if page.viewtype == 'CentsView' or page.viewtype == 'SimpleView' %}
+        <div id="viewContainer">
+          <button id="startButton"> Start </button>
+        </div>
+        {% endif %}
         </div>
       </div>
       <footer class="footer">
@@ -6,6 +11,8 @@
         </div>
       </footer>
     </div>
-
+    {% if page.viewtype == 'CentsView' or page.viewtype == 'SimpleView' %}
+      {% include tuner.html %}
+    {% endif %}
   </body>
 </html>

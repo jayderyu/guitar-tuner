@@ -1,5 +1,5 @@
 ---
-title    : Simple View
+title    : Simple
 layout   : frontpage
 category : Application
 viewtype : SimpleView

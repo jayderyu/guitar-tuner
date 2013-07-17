@@ -1,0 +1,47 @@
+<script type="text/javascript" src="{{ site.baseurl }}/lib/dsp.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/lib/gtuner-min.js"></script>
+<script type="text/javascript">
+
+  function init() {
+    var sbutton = document.getElementById("startButton");
+    
+    sbutton.addEventListener("click", startTuner, false);
+    sbutton.addEventListener("keydown", startTuner, false);
+  }
+
+  function startTuner() {
+    var viewContainer = document.getElementById("viewContainer");
+
+    window.AudioContext =
+      window.AudioContext || window.webkitAudioContext ||
+      window.mozAudioContext || window.msAudioContext;
+
+    navigator.getUserMedia =
+      navigator.getUserMedia || navigator.webkitGetUserMedia ||
+      navigator.mozGetUserMedia || navigator.msGetUserMedia;
+
+    if (window.AudioContext && navigator.getUserMedia){
+
+      var sbutton = document.getElementById("startButton");
+      viewContainer.removeChild(sbutton);
+
+      navigator.getUserMedia({audio : true},
+          function (stream) {
+
+            var view  = new {{ page.viewtype }}("viewContainer");
+            var tuner = new Tuner(view.update.bind(view));
+
+            view.run();
+            tuner.run(stream);
+
+          }, function (e) {
+            console.log(e);
+      });
+    } else {
+      alert("Web Audio not supported, please enable it or use another browser.");
+    }
+  }
+
+ init();
+
+</script>
