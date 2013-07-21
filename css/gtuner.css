@@ -548,9 +548,8 @@ footer p a:visited {
   color: rgba(255,111,105,0.8);
 }
 
-code {
-  display: inline-block;
-  padding: 10px 10px 10px 20px;
+.highlight {
+  padding: 5px 5px 5px 10px;
   background-color: rgb(255,254,244);
 
   box-shadow: inset 0px 0px 2px 0px #eeeeee;

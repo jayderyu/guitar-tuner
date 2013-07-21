@@ -3,5 +3,6 @@ description : "Simple guitar tuner using the Web Audio API."
 baseurl     : "/gtuner"
 
 markdown : redcarpet
+pygments : true
 
 navCategories : ["Project", "Application"]

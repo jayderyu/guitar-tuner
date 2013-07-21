@@ -6,11 +6,11 @@ category : Project
 
 Something, something gtuner ...
 
-``` javascript
+```javascript
 
 /* this should be a little javascript code snippet */
 function plusOne() {
-  return functio(x) { 1 + x };
+  return function (x) { 1 + x };
 }
 
 ```
