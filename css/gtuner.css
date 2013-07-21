@@ -412,6 +412,7 @@ body {
 }
 
 a {
+  color: rgb(13,18,16);
   text-decoration: none;
 }
 
@@ -448,7 +449,7 @@ header nav ul li {
   padding: 0px;
 
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
 
   display: inline;
   padding-left: 5px;
@@ -460,12 +461,10 @@ header nav ul li:last-child {
   padding-right: 0px;
 }
 
+header nav ul li
+
 header nav ul li:first-child {
   padding-left: 0px;
-}
-
-header nav ul li a:visited {
-  color: rgb(255,111,105);
 }
 
 header nav ul li a:hover {
@@ -542,10 +541,6 @@ footer p {
 }
 
 footer p a {
-}
-
-footer p a:visited {
-  color: rgba(255,111,105,0.8);
 }
 
 .highlight {
