@@ -1,6 +1,0 @@
-A less error occured trying to build your bundle. You've likely entered an invalid input into the less variable field. Check your syntax and try again!
-
- thanks!
-
-
-{"type":"undefined_method","message":"error evaluating function `lighten`: Object #<Object> has no method 'toHSL'","filename":"bootstrap.css","index":9201,"line":304,"column":17,"extract":["@linkColor: #00A0EB;","@linkColorHover: lighten(@linkColor 15%);","@blue: #67CFFF;"]}
