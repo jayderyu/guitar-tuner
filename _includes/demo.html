@@ -1,0 +1,113 @@
+<script type="text/javascript">
+
+var demoTuner = new Tuner()
+  , demoView
+  ;
+
+var tableContainer = document.getElementById("tableContainer");
+
+var tableElement = document.createElement("table")
+  , tableHead    = document.createElement("thead")
+  , tableBody    = document.createElement("tbody")
+  , tableHeadRow = document.createElement("tr")
+  , tableHeadPrp = document.createElement("th")
+  , tableHeadVal = document.createElement("th")
+  ;
+
+tableElement.appendChild(tableHead);
+tableElement.appendChild(tableBody);
+tableHead.appendChild(tableHeadRow);
+
+tableHeadPrp.innerHTML = "Property";
+tableHeadVal.innerHTML = "Value";
+
+tableHeadRow.appendChild(tableHeadPrp);
+tableHeadRow.appendChild(tableHeadVal);
+
+
+for (dspProp in demoTuner) {
+  if (dspProp != "_instance") {
+    var propName  = document.createElement("td")
+      , propValue = document.createElement("td")
+      , propRow   = document.createElement("tr")
+      ;
+
+    propName.innerHTML = dspProp;
+    propValue.innerHTML = demoTuner[dspProp];
+
+    propRow.appendChild(propName);
+    propRow.appendChild(propValue);
+
+    tableBody.appendChild(propRow);
+  }
+}
+
+tableContainer.appendChild(tableElement);
+
+  function launchDemo(view) {
+
+    navigator.getMedia =
+      navigator.getUserMedia || navigator.webkitGetUserMedia ||
+      navigator.mozGetUserMedia || navigator.msGetUserMedia;
+
+    navigator.getMedia(
+        { audio : true 
+        }, 
+        function (stream) {
+
+              switch(view) {
+              case "simple": demoView = new SimpleView("simpleViewButton");
+                             break;
+              case "gauge": demoView = new CentsGauge("gaugeViewButton");
+                            break;
+              default: throw new ReferenceError("Specified view [" + view + "]" +
+                                                "does not exist.");
+              }
+              
+              demoTuner.viewCallback   = demoView.update.bind(demoView);
+              demoTuner.setAudioStream = stream;
+
+
+              demoView.run();
+              demoTuner.run();
+
+          }
+        , function (err) {
+            /* print it on the webpage */
+            console.log(err);
+        }
+    );
+  }
+
+  var gaugeViewButton = document.getElementById("gaugeViewButton")
+    , simpleViewButton = document.getElementById("simpleViewButton")
+    ;
+
+  /* test to see if the elements exist */
+  simpleViewButton.addEventListener(
+      "click"
+      , function () {
+          var gtunerView = document.getElementById("gtunerView");
+
+          if (gtunerView) {
+            gaugeViewButton.removeChild(gtunerView);
+          }
+
+          launchDemo("simple"); }
+    , false
+  );
+
+  gaugeViewButton.addEventListener(
+      "click"
+      , function () {
+          var gtunerView = document.getElementById("gtunerView");
+    
+          if (gtunerView) {
+            simpleViewButton.removeChild(gtunerView);
+          }
+
+          launchDemo("gauge"); }
+    , false
+  );
+
+</script>
