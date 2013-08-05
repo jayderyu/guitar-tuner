@@ -5,9 +5,7 @@ layout   : frontpage
 
 #About
 
-This project was started so that I hame something to work on while learning JavaScript.
-
-It is a simple musical instrument tuner that uses the Web Audio API and canvas support built into the web browser.
+gtuner is a simple musical instrument tuner that uses the Web Audio API and canvas support built into the web browser.
 
 For now the project depends on [dsp.js](https://github.com/corbanbrook/dsp.js) to do the fft, but the plan is to write a standalone fft implementation
 so that the project can be self-contained.
