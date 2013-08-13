@@ -480,7 +480,7 @@ var ViewContextAndStyle = (function () {
       , "run" : {
           value : function() {
 
-            var arc  = quadrantArc - this.peek.cents
+            var arc  = quadrantArc - (this.peek.cents * quadrantArc / 50)
               , alfa = arc / radius
               , x = centerX + radius * Math.cos(alfa)
               , y = centerY - radius * Math.sin(alfa)
