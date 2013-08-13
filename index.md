@@ -20,5 +20,4 @@ the github page and fork the repo, there is still much work that needs to be don
 
 ##Demo
 
-Cents Gauge view is currently broken.  
 The tuner is running with the reference frequency set at a standard **A4 440Hz** and the following properties:
