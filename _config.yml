@@ -1,6 +1,6 @@
-name        : "gtuner"
+name        : "guitar-tuner"
 description : "Simple guitar tuner using the Web Audio API."
-baseurl     : "/gtuner"
+baseurl     : "/guitar-tuner"
 
 markdown : redcarpet
 pygments : true
