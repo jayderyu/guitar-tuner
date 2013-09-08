@@ -453,7 +453,6 @@ header nav {
   min-width: 50%; /* 1000 / 1200 */
 }
 
-
 header nav ul {
   margin: 0px;
   padding: 0px;
@@ -496,33 +495,6 @@ header nav ul li a:hover {
   margin-right: auto;
 
   max-width: 700px;
-}
-
-/* Button classes */
-
-.btn-Red {
-  background-color: rgb(255,111,105);
-}
-
-.btn-Red:hover {
-  background-color: rgba(255,111,105,0.5);
-}
-
-
-.btn-Yellow {
-  background-color: rgb(255,241,206);
-}
-
-.btn-Yellow:hover {
-  background-color: rgba(255,241,206,0.5);
-}
-
-.btn-Green {
-  background-color: rgb(75,173,155);
-}
-
-.btn-Green:hover {
-  background-color: rgba(75,173,155,0.5);
 }
 
 section {
@@ -616,7 +588,6 @@ footer p a:hover {
 }
 
 .demoContainer {
-  box-shadow: 0px 0px 1px 0px rgba(23,96,125,0.5);
   margin: 5px 10px 5px 0px;
   padding: 5px;
 
