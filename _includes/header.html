@@ -11,15 +11,27 @@
     <link href="{{ site.baseurl }}/css/pygments.css" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
-      <header><!--
+    <div class="container"><!--
+   --><header><!--
       --><h1 id="gtuner">Guitar-Tuner</h1><!--
       --><nav><!--
       --><ul><!--
-        --><li class="border-blink toLeft"><a href="{{ site.baseurl }}/index.html">Documentation</a></li><!--
-        --><li class="border-blink toLeft"><a href="{{ site.baseurl }}/demo.html">Demo</a></li><!--
+        --><li class={% if page.title == 'Documentation' %}
+                      "current"
+                     {% else %}
+                     "border-blink toLeft"
+                     {% endif %}><!--
+            --><a href="{{ site.baseurl }}/index.html">Documentation</a><!--
+        --></li><!--
+        --><li class={% if page.title == 'Demo' %}
+                      "current"
+                     {% else %}
+                     "border-blink toLeft"
+                     {% endif %}><!--
+            --><a href="{{ site.baseurl }}/demo.html">Demo</a><!--
+        --></li><!--
         --><li class="border-blink toRight"><a href="https://github.com/archblob/gtuner">GitHub Project Page</a></li><!--
         --></ul><!--
       --></nav><!--
-      --></header>
-      <section>
+      --></header><!--
+   --><section>

@@ -417,7 +417,7 @@ a {
 
 #gtuner {
   font-size : 2em;
-  color: rgb(13,18,16,0.8);
+  color: rgba(13,18,16,0.8);
   display: inline-block;
   min-width: 50%; /* 200 / 1200 */
 }
@@ -468,13 +468,19 @@ header nav ul li {
   font-weight: 400;
 
   display: inline-block;
-  padding-left: 5px;
-  padding-right: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+header nav ul li:first-child {
+  margin-left: 0px;
 }
 
 header nav ul li:last-child {
   border-left : 1px solid #eeeeee;
-  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 5px;
 }
 
 header nav ul li a {
@@ -540,6 +546,12 @@ footer p a:hover {
 }
 
 /* try to do this on :active too */
+
+.current {
+  border-color: #FF9311;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+}
 
 .border-blink  {
   background-color: white;
