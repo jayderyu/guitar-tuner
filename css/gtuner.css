@@ -415,11 +415,15 @@ a {
   text-decoration: none;
 }
 
+a:visited {
+  color: rgb(241,89,74);
+}
+
 #gtuner {
   font-size : 2em;
   color: rgba(13,18,16,0.8);
   display: inline-block;
-  min-width: 50%; /* 200 / 1200 */
+  min-width: 50%;
 }
 
 h1 {
@@ -450,7 +454,7 @@ header {
 }
 
 header nav {
-  min-width: 50%; /* 1000 / 1200 */
+  min-width: 50%;
 }
 
 header nav ul {
@@ -493,7 +497,7 @@ header nav ul li:first-child {
 }
 
 header nav ul li a:hover {
-  color: #17607D;
+  color: rgb(36,154,167);
 }
 
 .container {
@@ -548,19 +552,20 @@ footer p a:hover {
 /* try to do this on :active too */
 
 .current {
-  border-color: #FF9311;
+  border-color: rgb(36,154,167);
   border-style: solid;
   border-width: 0 0 1px 0;
 }
 
 .border-blink  {
   background-color: white;
+  padding: 2px;
   position: relative;
 }
 
 .toRight:before, .toLeft:before {
   content:"";
-  background-color: #FF9311;
+  background-color: rgb(36,154,167);
   position: absolute;
 
   width:10%;
